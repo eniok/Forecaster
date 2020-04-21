@@ -70,5 +70,9 @@ Cassandra may be running on other ports rather than specified in the DbCommunica
 where its running in case of crash.
 In case db is not initialized, initialize it in cqlsh by copy pasting the code provided in initDB.
 
+Future Work
+
+Using more resources adn reliable API, implement the Forecast function, to return a predicted price
+of the stock to the user.
 
 Enjoy!
