@@ -7,6 +7,11 @@ Forecaster is a restful api service designed by developer to developers.
 
 You can select your favourite stocks and get daily updates on their Price change, average weekly price, historical prices, min-max, and (soon-to-add) Forecasted Prediction!
 
+
+**Database Schema**
+
+![DB_SCHEMA](images/db_schema.png)
+
 Prerequisites
     
     curl
@@ -18,7 +23,7 @@ Setup
 
 How to use Forecaster:
 
-Step 1. 
+* **Step 1.**
 
 Sign up! Its really easy, just send a post request to this website using your username and selected password. You will be given an API key... keep it a secret thought  shhhhh!!! 
 
@@ -28,7 +33,7 @@ ex: 
 
  
 
-Step 2. 
+* **Step 2.**
 
 Add your favourite stocks or delete (-X DELETE) them to keep track of... Google, Apple, DowJones, Go.Ku Inc, NASDAQ etc.
 
@@ -38,7 +43,7 @@ ex:
 
  
 
-Step 3. 
+* **Step 3.**
 
 Start making calls to get your stock infromation. Just make sure to put your api-key as follows into the get request. You can also put a startDate and/or a endDate. This request will generate a json with: maxPrice, minPrice, AverageWeeklyPrice, currentPrice.
 
@@ -48,14 +53,16 @@ ex:
 
 
 
-Step 4.
+* **Step 4.**
+
 Hate numbers like graphics? No problem, we'll return you a graph image 
 
 ex:
 
     http://forecaster/stock/chart/AAPL?apiKey=<APIkey>
 
-Step 5.
+* **Step 5.**
+
 You can also have a look at your portolio. The following will return a json list of your favourite stocks.
 
 
@@ -64,15 +71,16 @@ ex:
     http://forecaster/profile?apiKey=<APIkey>
 
 
-Known Issues
+**Known Issues**
 
 Cassandra may be running on other ports rather than specified in the DbCommunicator, check the ip address
 where its running in case of crash.
 In case db is not initialized, initialize it in cqlsh by copy pasting the code provided in initDB.
 
-Future Work
+**Future Work**
 
 Using more resources adn reliable API, implement the Forecast function, to return a predicted price
 of the stock to the user.
+
 
 Enjoy!
